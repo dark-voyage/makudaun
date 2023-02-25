@@ -1,4 +1,4 @@
-use clap::{Args, Parser, Subcommand, ValueEnum};
+use clap::{Parser, Subcommand};
 
 /// Markdown to HTML converter tool
 #[derive(Debug, Parser)]
@@ -17,9 +17,9 @@ pub enum Commands {
         /// The remote to clone
         #[clap(short, long)]
         file: String,
-        
-        /// Output file (optional)
+
+        /// Output file
         #[clap(short, long)]
-        output: Option<&'static str>,
+        output: Option<String>,
     },
 }
