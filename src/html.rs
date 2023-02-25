@@ -1,4 +1,4 @@
-const STYLES: &str = include_str!("./styles.css");
+const LIGHT_STYLES: &str = include_str!("./styles.css");
 const DARK_STYLES: &str = include_str!("./dark.styles.css");
 
 pub struct Html {
@@ -7,10 +7,35 @@ pub struct Html {
 }
 
 impl Html {
-    fn new(title: &'static str, is_light: bool) -> Html {
+    fn new(title: &'static str, mode: &str) -> Html {
         Html {
             title,
-            styles: if is_light { DARK_STYLES } else { STYLES },
+            styles: match mode {
+                "dark" => DARK_STYLES,
+                _ => LIGHT_STYLES,
+            },
         }
+    }
+    
+    // fn render() -> String {
+    //
+    // }
+    
+    fn raw_css(&self) -> &'static str {
+        self.styles
+    }
+    
+    fn minify_css(&self) -> String {
+        let mut minified = String::new();
+        
+        // Remove all newlines
+        for line in self.styles.lines() {
+            minified.push_str(line.trim());
+        }
+        
+        // Remove all whitespace
+        minified.retain(|c| !c.is_whitespace());
+        
+        minified
     }
 }
