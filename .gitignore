@@ -12,6 +12,6 @@ Cargo.lock
 # Idea files
 .idea
 
-# Added by cargo
+# Mac files
+.DS_Store
 
-/target
