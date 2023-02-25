@@ -1,8 +1,9 @@
-mod parser;
 mod args;
+mod html;
+mod parser;
 
+use args::{Cli, Commands};
 use clap::Parser;
-use args::{Commands, Cli};
 
 fn main() {
     let args = Cli::parse();
