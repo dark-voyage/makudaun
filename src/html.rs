@@ -1,5 +1,5 @@
-const LIGHT_STYLES: &str = include_str!("./styles.css");
-const DARK_STYLES: &str = include_str!("./dark.styles.css");
+const LIGHT_STYLES: &str = include_str!("styles/styles.css");
+const DARK_STYLES: &str = include_str!("styles/dark.styles.css");
 
 pub struct Html {
     title: &'static str,
@@ -23,6 +23,10 @@ impl Html {
     
     fn raw_css(&self) -> &'static str {
         self.styles
+    }
+    
+    fn dark_mode(&self) -> bool {
+        self.styles == DARK_STYLES
     }
     
     fn minify_css(&self) -> String {
