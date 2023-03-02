@@ -2,6 +2,13 @@
 name = "makudaun"
 version = "0.0.0"
 edition = "2021"
+homepage = "https://github.com/katsuki-yuri/makudaun"
+repository = "https://github.com/katsuki-yuri/makudaun"
+description = "Markdown renderer tool made on Rust"
+authors = ["Yuri Katsuki <katsuki.moe>"]
+keywords = ["markdown"]
+readme = "readme.md"
+license = "GPLv3.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
