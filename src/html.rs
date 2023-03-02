@@ -1,32 +1,68 @@
 const LIGHT_STYLES: &str = include_str!("styles/styles.css");
 const DARK_STYLES: &str = include_str!("styles/dark.styles.css");
 
+pub enum Mode {
+    Light,
+    Dark,
+}
+
 pub struct Html {
     title: &'static str,
     styles: &'static str,
 }
 
+impl Default for Html {
+    fn default() -> Html {
+        Html::new()
+    }
+}
+
 impl Html {
-    fn new(title: &'static str, mode: &str) -> Html {
+    fn new() -> Html {
         Html {
-            title,
-            styles: match mode {
-                "dark" => DARK_STYLES,
-                _ => LIGHT_STYLES,
-            },
+            title: "Markdown File",
+            styles: LIGHT_STYLES,
         }
     }
     
-    // fn render() -> String {
-    //
-    // }
-    
-    fn raw_css(&self) -> &'static str {
-        self.styles
+    pub fn set_title(&mut self, title: &'static str) {
+        self.title = title;
     }
     
-    fn dark_mode(&self) -> bool {
-        self.styles == DARK_STYLES
+    pub fn set_mode(&mut self, mode: Mode) {
+        self.styles = match mode {
+            Mode::Dark => DARK_STYLES,
+            Mode::Light => LIGHT_STYLES,
+        };
+    }
+    
+    pub fn render(&self, content: &str, minify: bool) -> String {
+        format!(
+            r#"
+            <!DOCTYPE html>
+            <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>{}</title>
+                    <style>{}</style>
+                </head>
+                <body>
+                    {}
+                </body>
+            </html>
+            "#,
+            self.title,
+            match minify {
+                true => self.minify_css(),
+                false => self.raw_css(),
+            },
+            content
+        )
+    }
+    
+    fn raw_css(&self) -> String {
+        self.styles.to_string()
     }
     
     fn minify_css(&self) -> String {
