@@ -1,7 +1,7 @@
 body {
     font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #111;
-    background-color: #fdfdfd;
+    color: #f1f1f1;
+    background-color: #212121;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -16,19 +16,16 @@ body {
         padding: 5px;
     }
     body > #content {
-        padding: 0px 20px 20px 20px !important;
+        padding: 0 20px 20px 20px !important;
     }
 }
 
 body > #content {
-    margin: 0px;
     max-width: 900px;
-    border: 1px solid #e1e4e8;
-    padding: 10px 40px;
-    padding-bottom: 20px;
+    border: 1px solid #727272;
+    padding: 10px 40px 20px;
     border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 hr {
@@ -88,13 +85,11 @@ pre > code {
 
 blockquote {
     margin-left: 30px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 16px;
-    border-left-width: 3px;
-    padding: 0 1em;
-    color: #828282;
+    color: #bdbdbd;
     border-left: 4px solid #e8e8e8;
-    padding-left: 15px;
+    padding: 0 1em 0 15px;
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -103,11 +98,10 @@ blockquote {
 blockquote * {
     font-style: normal !important;
     letter-spacing: 0;
-    color: #6a737d !important;
+    color: #b2c2d2 !important;
 }
 
 table {
-    border-spacing: 2px;
     display: block;
     font-size: 14px;
     overflow: auto;
@@ -145,7 +139,7 @@ p {
     line-height: 24px;
     font-weight: 400;
     font-size: 16px;
-    color: #24292e;
+    color: #b1c7de;
 }
 
 ul {
@@ -153,7 +147,7 @@ ul {
 }
 
 li {
-    color: #24292e;
+    color: #b1c7de;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -165,7 +159,7 @@ li + li {
 
 * {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: #24292e;
+    color: #acc3d7;
 }
 
 a:visited {
@@ -174,5 +168,5 @@ a:visited {
 
 h1, h2, h3 {
     border-bottom: 1px solid #eaecef;
-    color: #111;
+    color: #f5f5f5;
 }

@@ -18,64 +18,69 @@ impl Default for Html {
 }
 
 impl Html {
-    fn new() -> Html {
+    pub fn new() -> Html {
         Html {
-            title: "Markdown File",
+            title: "Html Document from Makudaun",
             styles: LIGHT_STYLES,
         }
     }
-    
+
     pub fn set_title(&mut self, title: &'static str) {
         self.title = title;
     }
-    
+
     pub fn set_mode(&mut self, mode: Mode) {
         self.styles = match mode {
             Mode::Dark => DARK_STYLES,
             Mode::Light => LIGHT_STYLES,
         };
     }
-    
-    pub fn render(&self, content: &str, minify: bool) -> String {
-        format!(
-            r#"
-            <!DOCTYPE html>
-            <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>{}</title>
-                    <style>{}</style>
-                </head>
-                <body>
-                    {}
-                </body>
-            </html>
-            "#,
+
+    pub fn render(&self, content: &str, minify_css: bool, minify_html: bool) -> String {
+        let rendered = format!(
+            r#"<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{}</title>
+<style>{}</style>
+</head>
+<body>
+{}
+</body>
+</html>"#,
             self.title,
-            match minify {
-                true => self.minify_css(),
+            match minify_css {
+                true => self.minify(self.styles.to_string(), false),
                 false => self.raw_css(),
             },
             content
-        )
+        );
+
+        match minify_html {
+            true => self.minify(rendered, false),
+            false => rendered,
+        }
     }
-    
+
     fn raw_css(&self) -> String {
         self.styles.to_string()
     }
-    
-    fn minify_css(&self) -> String {
-        let mut minified = String::new();
-        
+
+    fn minify(&self, content: String, space: bool) -> String {
+        let mut compressed = String::new();
+
         // Remove all newlines
-        for line in self.styles.lines() {
-            minified.push_str(line.trim());
+        for line in content.lines() {
+            compressed.push_str(line.trim());
         }
-        
-        // Remove all whitespace
-        minified.retain(|c| !c.is_whitespace());
-        
-        minified
+
+        if space {
+            // Remove all whitespace
+            compressed.retain(|c| !c.is_whitespace());
+        }
+
+        compressed
     }
 }

@@ -20,6 +20,10 @@ pub enum Commands {
 
         /// Output file
         #[clap(short, long)]
-        output: Option<String>,
+        to: Option<String>,
+        
+        /// Mode [dark, light]
+        #[clap(short, long)]
+        mode: Option<String>,
     },
 }

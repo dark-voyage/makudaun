@@ -16,19 +16,16 @@ body {
         padding: 5px;
     }
     body > #content {
-        padding: 0px 20px 20px 20px !important;
+        padding: 0 20px 20px 20px !important;
     }
 }
 
 body > #content {
-    margin: 0px;
     max-width: 900px;
     border: 1px solid #e1e4e8;
-    padding: 10px 40px;
-    padding-bottom: 20px;
+    padding: 10px 40px 20px;
     border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 hr {
@@ -88,13 +85,11 @@ pre > code {
 
 blockquote {
     margin-left: 30px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 16px;
-    border-left-width: 3px;
-    padding: 0 1em;
     color: #828282;
     border-left: 4px solid #e8e8e8;
-    padding-left: 15px;
+    padding: 0 1em 0 15px;
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -107,7 +102,6 @@ blockquote * {
 }
 
 table {
-    border-spacing: 2px;
     display: block;
     font-size: 14px;
     overflow: auto;
