@@ -15,3 +15,5 @@ Cargo.lock
 # Mac files
 .DS_Store
 
+# Compiled binary
+makudaun
