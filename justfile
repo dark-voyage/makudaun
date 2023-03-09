@@ -10,4 +10,4 @@ format:
 	cargo fmt
 
 bin:
-  cargo run -- -f README.md -o some.html
+  cargo run -- convert --file test.md

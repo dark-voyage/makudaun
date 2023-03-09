@@ -41,9 +41,13 @@ fn main() {
             let parsed = parser.parse(input.get_content());
             let render = html.render(parsed.as_str(), true, false);
 
-            output.write_content(render);
+            // Convert all necessary characters
+            let render = render
+                .replace("&lt;", "<")
+                .replace("&gt;", ">")
+                .replace("&quot;", "\"");
 
-            println!("{}", output.get_content());
+            output.write_content(render);
 
             match to {
                 Some(out) => {

@@ -17,3 +17,7 @@ Cargo.lock
 
 # Compiled binary
 makudaun
+
+# Compiled output
+some.html
+out.html
