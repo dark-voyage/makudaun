@@ -8,49 +8,32 @@ Render markdown files to HTML using GitHub flavored themes.
 
 [![GitHub top language](https://img.shields.io/github/languages/top/katsuki-yuri/makudaun?style=flat-square&logo=github)](https://github.com/katsuki-yuri/makudaun)
 [![Channel](https://img.shields.io/badge/Chat-grey?style=flat-square&logo=telegram)](https://t.me/yurionblog)
-[![Shellcheck CI](https://github.com/katsuki-yuri/dots/actions/workflows/test.yml/badge.svg)](https://github.com/katsuki-yuri/dots/actions/workflows/test.yml)
+[![Shellcheck CI](https://github.com/katsuki-yuri/makudaun/actions/workflows/test.yml/badge.svg)](https://github.com/katsuki-yuri/makudaun/actions/workflows/test.yml)
 
 ## About
 
-In this repository I keep all my configurations and dot files to maintain my healthy development environment for any case. It contains configurations
-for shell and environments like zsh (arch-linux, macos), powershell (windows). It comes with installer to shorten my time spending on set up.
+Makudaun is a simple markdown renderer that uses GitHub flavored themes. It is written in Rust and uses [markdown alpha](https://github.com/wooorm/markdown-rs) 
+as a Markdown parser.
 
-> Everytime I installed my dev env manually by myself, I started feeling like a garbage myself... So here you are!
+> Everytime I used my old makudaun written on TypeScript, I started feeling like a idiot myself... So here you are!
 
 ## Features
 
-- Syntax Highlighting
-- Auto Completions
-- Auto Suggestions
-- Rust made replacements
-- Key configurations
-- Software configurations
+- GitHub Flavor
+- Dark theme support
 
 ## Install (Automatic)
 
-This process can be tough and easy at the same time depending on yourself... If you prefer trusting me and let me do all the dirty stuff, then just run the install script located on the root location of the project like this:
-
-### Linux (MacOS & Arch Linux)
+You may use cargo to install the binary:
 
 ```shell
-# I'm not evil, check the source code if you don't trust me!
-curl -fsSL https://dottu.katsuki.moe/install.sh | sh
-```
-
-### Windows NT
-
-```shell
-# Run this if it's your first time opening terminal
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-# Install configurations
-irm https://dottu.katsuki.moe/install.ps1 | iex
+cargo install makudaun
 ```
 
 ## Install (Manual)
 
-Just copy-paste configs that you would need. You may use symlinks to prepend to the repository and then update the repo to get the latest changes.
+Visit the releases page on GitHub, download the latest binary and put it in your PATH. Link to the latest release: [Releases](https://github.com/katsuki-yuri/makudaun/releases/latest)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](license) file for details.
+This project is licensed under the GPL-3.0 License - see the [LICENSE](license) file for details.

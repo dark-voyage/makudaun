@@ -1,6 +1,6 @@
 [package]
 name = "makudaun"
-version = "0.0.0"
+version = "0.0.1"
 edition = "2021"
 homepage = "https://github.com/katsuki-yuri/makudaun"
 repository = "https://github.com/katsuki-yuri/makudaun"
