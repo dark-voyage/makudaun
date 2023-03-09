@@ -1,12 +1,12 @@
 <header>
 <img src="https://www.katsuki.moe/favicons/pinned.svg" alt="logo" height="100" align="left">
-<h1 style="display: inline">Dottu Desu Ka!</h1>
+<h1 style="display: inline">Makudaun!</h1>
 
-My dotfiles for my machines to maintain my own development environment.
+Render markdown files to HTML using GitHub flavored themes.
 
 </header>
 
-[![GitHub top language](https://img.shields.io/github/languages/top/katsuki-yuri/dots?style=flat-square&logo=github)](https://github.com/katsuki-yuri/dots)
+[![GitHub top language](https://img.shields.io/github/languages/top/katsuki-yuri/makudaun?style=flat-square&logo=github)](https://github.com/katsuki-yuri/makudaun)
 [![Channel](https://img.shields.io/badge/Chat-grey?style=flat-square&logo=telegram)](https://t.me/yurionblog)
 [![Shellcheck CI](https://github.com/katsuki-yuri/dots/actions/workflows/test.yml/badge.svg)](https://github.com/katsuki-yuri/dots/actions/workflows/test.yml)
 
