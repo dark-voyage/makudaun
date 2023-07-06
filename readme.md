@@ -1,14 +1,14 @@
 <header>
-<img src="https://www.katsuki.moe/favicons/pinned.svg" alt="logo" height="100" align="left">
+<img src="https://www.orzklv.uz/favicons/pinned.svg" alt="logo" height="100" align="left">
 <h1 style="display: inline">Makudaun!</h1>
 
 Render markdown files to HTML using GitHub flavored themes.
 
 </header>
 
-[![GitHub top language](https://img.shields.io/github/languages/top/katsuki-yuri/makudaun?style=flat-square&logo=github)](https://github.com/katsuki-yuri/makudaun)
-[![Channel](https://img.shields.io/badge/Chat-grey?style=flat-square&logo=telegram)](https://t.me/yurionblog)
-[![Shellcheck CI](https://github.com/katsuki-yuri/makudaun/actions/workflows/test.yml/badge.svg)](https://github.com/katsuki-yuri/makudaun/actions/workflows/test.yml)
+[![GitHub top language](https://img.shields.io/github/languages/top/orzklv/makudaun?style=flat-square&logo=github)](https://github.com/orzklv/makudaun)
+[![Channel](https://img.shields.io/badge/Chat-grey?style=flat-square&logo=telegram)](https://t.me/orzklvb)
+[![Shellcheck CI](https://github.com/orzklv/makudaun/actions/workflows/test.yml/badge.svg)](https://github.com/orzklv/makudaun/actions/workflows/test.yml)
 
 ## About
 
@@ -32,7 +32,7 @@ cargo install makudaun
 
 ## Install (Manual)
 
-Visit the releases page on GitHub, download the latest binary and put it in your PATH. Link to the latest release: [Releases](https://github.com/katsuki-yuri/makudaun/releases/latest)
+Visit the releases page on GitHub, download the latest binary and put it in your PATH. Link to the latest release: [Releases](https://github.com/orzklv/makudaun/releases/latest)
 
 ## License
 

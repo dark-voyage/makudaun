@@ -1,11 +1,11 @@
 [package]
 name = "makudaun"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
-homepage = "https://github.com/katsuki-yuri/makudaun"
-repository = "https://github.com/katsuki-yuri/makudaun"
+homepage = "https://github.com/orzklv/makudaun"
+repository = "https://github.com/orzklv/makudaun"
 description = "Markdown renderer tool made on Rust"
-authors = ["Yuri Katsuki <katsuki.moe>"]
+authors = ["Sokhibjon Orzikulov <orzklv.uz>"]
 keywords = ["markdown"]
 readme = "readme.md"
 license = "GPL-3.0"
